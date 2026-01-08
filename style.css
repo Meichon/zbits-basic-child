@@ -3,3 +3,148 @@ Theme Name: ZBITS Básico Child
 Template: zbits-basico
 Version: 1.0.0
 */
+/* ==============================================
+   FORMULARIOS - CORRECCIÓN BOTÓN MÓVIL
+   ============================================== */
+
+/* Botón centrado en móviles */
+@media (max-width: 768px) {
+    .wpcf7-submit {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        box-sizing: border-box !important;
+    }
+    
+    /* Asegurar que el contenedor del botón no tenga padding extra */
+    .col-12.mt-4 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+/* Mejorar apariencia del botón */
+.wpcf7-submit {
+    border-radius: 8px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    transition: all 0.3s ease !important;
+}
+
+.wpcf7-submit:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* ==============================================
+   MODAL POLÍTICA DE PRIVACIDAD - CORRECCIONES MÓVIL
+   ============================================== */
+
+/* 1. Icono de seguridad en encabezado */
+@media (max-width: 768px) {
+    /* Icono mantiene su forma circular */
+    #politicaModal .modal-header i.fa-shield-alt {
+        width: 60px !important;
+        height: 60px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto 15px !important;
+        background-color: var(--color-dark) !important;
+        color: white !important;
+        font-size: 24px !important;
+    }
+    
+    /* Títulos responsivos */
+    #politicaModal .modal-title {
+        font-size: 1.25rem !important;
+        text-align: center !important;
+        line-height: 1.3 !important;
+    }
+}
+
+/* 2. Botones Cancelar y Aceptar en móvil */
+@media (max-width: 576px) {
+    /* Contenedor de botones */
+    #politicaModal .modal-footer {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        padding: 1.5rem 1rem !important;
+    }
+    
+    /* Estilo individual para cada botón */
+    #politicaModal .modal-footer .btn {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 18px 25px !important;
+        border-radius: 12px !important;
+        font-weight: 700 !important;
+        font-size: 1.1rem !important;
+        text-align: center !important;
+        display: block !important;
+        min-height: 60px !important;
+        letter-spacing: 0.5px !important;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Botón CANCELAR */
+    #politicaModal .modal-footer .btn-secondary {
+        background: linear-gradient(135deg, #6c757d 0%, #495057 100%) !important;
+        border: 3px solid #6c757d !important;
+        color: white !important;
+        order: 2;
+    }
+    
+    /* Botón ACEPTAR */
+    #politicaModal .modal-footer .btn-primary {
+        background: linear-gradient(135deg, var(--color-dark) 0%, #000000 100%) !important;
+        border: 3px solid var(--color-accent) !important;
+        color: white !important;
+        order: 1;
+    }
+    
+    /* Efectos hover */
+    #politicaModal .modal-footer .btn:hover {
+        transform: translateY(-3px) !important;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3) !important;
+    }
+}
+
+/* 3. Modal más ajustado en pantallas pequeñas */
+@media (max-width: 576px) {
+    #politicaModal .modal-dialog {
+        margin: 15px !important;
+        max-width: calc(100% - 30px) !important;
+    }
+    
+    #politicaModal .modal-content {
+        border-radius: 12px !important;
+        overflow: hidden !important;
+    }
+}
+
+/* 4. Corrección específica para el modal de política */
+#politicaModal .modal-body {
+    scroll-behavior: smooth;
+}
+
+/* 5. Scrollbar personalizado */
+.modal-body::-webkit-scrollbar {
+    width: 6px;
+}
+
+.modal-body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+    background: var(--color-accent);
+    border-radius: 3px;
+}
